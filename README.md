@@ -343,11 +343,13 @@ the Zestimate shown on the same Zillow page from the
 [PropertiesAPI](https://propertiesapi.com) JSON API, so it needs no Chrome or
 chromedriver.  The account notes stay the same (`zestimate:<Zillow URL>`).
 
-PropertiesAPI is an independent paid service, not affiliated with Zillow.  New
-accounts get a one-time trial of 50 free lookups.  A free account is never
-charged automatically: after the trial, lookups need prepaid credits or a paid
-plan on your PropertiesAPI account.  The script uses one lookup per tagged account each time
-it runs, and a repeat lookup of the same home within 24 hours is free.
+PropertiesAPI is an independent service, not affiliated with Zillow.  New
+accounts get 50 lookups to start, then 10 free every month, with no card, and
+a free account is never charged automatically.  Beyond that, lookups need
+prepaid credits or a paid plan.  The script uses one lookup per tagged account
+each time it runs, and a repeat lookup of the same home within 24 hours is
+free.  Zestimates change slowly, so running zestimate.js once a month keeps one
+home well inside the free 10.
 
 When Zillow shows no Zestimate for a home, the script skips that account rather
 than using the listing price.  An invalid key, no remaining lookups or a rate
